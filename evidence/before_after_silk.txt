@@ -1,0 +1,9 @@
+
+|       user |        endpoint |orders| SQL queries | time (ms, local SQLite) |
+|------------|-----------------|------|-------------|-------------------------|
+| heavy_user | before (broken) | 250  |          753|                  2078   |
+| heavy_user | after (fixed)   | 250  |            3|                     54  |
+| light_user | before (broken) | 20   |          63 |                     207 |
+| light_user | after (fixed)   | 20   |           3 |                      31 |
+
+Same numbers are visible in the browser at /silk/ (run `python manage.py runserver`).
