@@ -1,5 +1,8 @@
 # Full-Stack Developer Assessment — Biz-Tech Analytics
 
+**Live Demo:** [Biz-Tech Assessment](https://biz-tech-assessment.onrender.com/)
+
+
 |Section|                                            What |                        Where |                   Run |
 |-------|-------------------------------------------------|------------------------------|-----------------------|
 |     1 | Diagnose a broken system (N+1 query regression) | this folder (Django project) | see "Section 1" below |
@@ -7,6 +10,14 @@
 |     3 |                     Written architecture review |   [`ANSWERS.md`](ANSWERS.md) |             read only |
 
 Written answers for all sections: **[ANSWERS.md](ANSWERS.md)**. Section 2 architecture decisions: **[DESIGN.md](DESIGN.md)**.
+
+### Live Demo (Render)
+
+- [Live Application](https://biz-tech-assessment.onrender.com/)
+- [Silk Profiler Dashboard](https://biz-tech-assessment.onrender.com/silk/)
+- [Original N+1 API](https://biz-tech-assessment.onrender.com/api/orders/summary/)
+- [Optimized API](https://biz-tech-assessment.onrender.com/api/orders/summary-fixed/)
+- [Django Admin](https://biz-tech-assessment.onrender.com/admin/)
 
 The two code sections are independent projects with their own `requirements.txt`; use a separate virtualenv for each.
 
@@ -63,6 +74,8 @@ python manage.py runserver
 | light_user | after (fixed)   | 20   |           3 |                      31 |
 
 (Times are local SQLite, so they are small. See ANSWERS.md for why production was 30s+.)
+
+**Live Deployment:** Hosted on Render using Django, Gunicorn, WhiteNoise and django-silk.
 
 No `.env` or secrets are committed. `SECRET_KEY` comes from `DJANGO_SECRET_KEY` (a dev-only default is used if unset).
 
